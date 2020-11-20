@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Headers">
+      <UniqueIdentifier>{cd8f3f11-462f-41ab-bab5-1a599f04e29f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
@@ -21,12 +24,48 @@
     <ClCompile Include="MyForm1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AddBahia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyForm1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bahia.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderNodos.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="HHlist.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Hlist.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MatList.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PileProduct.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Product.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="VHlist.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Vlist.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AddBahia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
