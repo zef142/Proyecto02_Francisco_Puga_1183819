@@ -34,6 +34,11 @@ namespace Proyecto02FranciscoPuga1183819 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ label1;
+	protected:
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 
 	private:
 		/// <summary>
@@ -48,12 +53,68 @@ namespace Proyecto02FranciscoPuga1183819 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Mongolian Baiti", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(36, 36);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(393, 23);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Bodegas Inteligentes de Guatemala S. A.";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(184, 93);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(55, 13);
+			this->label2->TabIndex = 1;
+			this->label2->Text = L"Opciones:";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(136, 124);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(146, 23);
+			this->button1->TabIndex = 2;
+			this->button1->Text = L"Nueva Bodega";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(136, 167);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(146, 23);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"Ver Bodega";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// MyForm
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(455, 258);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
+			this->Name = L"MyForm";
+			this->Text = L"Inicio";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
 		}
 #pragma endregion
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
