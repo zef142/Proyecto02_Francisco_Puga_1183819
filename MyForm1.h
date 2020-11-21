@@ -482,15 +482,14 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	   }
 
 	   void ShowBahias() {
-		   //Empieza con la primera fila
 		   NodoFill* nodoFillAux = NewBodega->HHlist->first;
 		   Bahia* BahiaAux;
 		   System::Windows::Forms::Control^ labelTemp;
-		   while (nodoFillAux != nullptr) {//Verificar que exista una lista en la fila
-			   BahiaAux = nodoFillAux->fill->first;//toma la primera bahia de la fila
+		   while (nodoFillAux != nullptr) {
+			   BahiaAux = nodoFillAux->fill->first;
 			   while (BahiaAux != nullptr) {
-				   String^ ID = "ID: " + Char::ToString(nodoFillAux->FillLetter) + Convert::ToString(BahiaAux->colums);//El id de la bahia
-				   String^ products = "";//Un string que contenga los tipos de productos que permite la bahia
+				   String^ ID = "ID: " + Char::ToString(nodoFillAux->FillLetter) + Convert::ToString(BahiaAux->colums);
+				   String^ products = "";
 				   for (int i = 0; i < 3; i++) {
 					   if (BahiaAux->product[i] > 0) {
 						   products = products + BahiaAux->product[i] + ", ";
@@ -542,7 +541,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	NewProduct = formProduct->GetProduct();
 	if (NewProduct!= nullptr && NewProduct->ProdType!= 0) {
 		String^ resp = NewBodega->InsertProduct(NewProduct);
-		if (String::Compare(resp, "false") == 0) { // Si no se pudo insertar un producto
+		if (String::Compare(resp, "false") == 0) {
 			resp = "Insercion de producto fallida, No existen bahias para esta cantidad o para el tipo de material";
 		}
 		MessageBox::Show(resp, "Info");

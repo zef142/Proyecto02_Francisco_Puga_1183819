@@ -122,7 +122,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 	private: System::Void BodegaPeek_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		if (listBox1->SelectedIndex != -1) {/*Si no tiene seleccionado nada el resultado seria -1*/
+		if (listBox1->SelectedIndex != -1) {
 			int indiceBodega = listBox1->SelectedIndex + 1;
 			Matrix* bodega = BodegasList->fill;
 			for (int i = 1; i < indiceBodega; i++) {
