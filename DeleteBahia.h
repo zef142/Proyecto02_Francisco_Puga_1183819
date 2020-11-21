@@ -64,6 +64,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"A", L"B", L"C", L"D", L"E" });
 			this->comboBox1->Location = System::Drawing::Point(130, 29);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(132, 21);
@@ -73,6 +74,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"1", L"2", L"3", L"4", L"5" });
 			this->comboBox2->Location = System::Drawing::Point(130, 65);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(132, 21);
@@ -105,6 +107,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->button1->TabIndex = 4;
 			this->button1->Text = L"Eliminar";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &DeleteBahia::button1_Click_1);
 			// 
 			// DeleteBahia
 			// 
@@ -124,10 +127,6 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 		}
 #pragma endregion
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	Close();
-}
-
 	public: int GetFill() {
 		Char fillChar = Convert::ToChar(this->comboBox1->SelectedItem);
 		int fill = fillChar;
@@ -141,5 +140,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	private: System::Void DeleteBahia_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	Close();
+}
 };
 }

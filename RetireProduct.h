@@ -144,6 +144,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->button1->TabIndex = 20;
 			this->button1->Text = L"Retirar";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &RetireProduct::button1_Click_1);
 			// 
 			// RetireProduct
 			// 
@@ -167,38 +168,16 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 		}
 #pragma endregion
-		int ProductoID;
+		int ProductID;
 		int Cant;
     String^ Resp;
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { //En caso de no haber ingresado los datos requeridos
-
-		ProductoID = this->comboBox1->SelectedIndex + 1;
-		if (ProductoID < 1) {
-			MessageBox::Show("Seleccione tipo producto", "Error");
-			return;
-		}
-
-		String^ CantS = Convert::ToString(this->textBox2->Text);
-		if (!Int32::TryParse(CantS, Cant)) {
-			MessageBox::Show("Ingrese una cantidad en numeros enteros", "Error");
-			return;
-		}
-
-		Resp = Convert::ToString(this->textBox3->Text);
-		if (String::IsNullOrEmpty(Resp)) {
-			MessageBox::Show("Ingrese el nombre del responsable", "Error");
-			return;
-		}
-		Close();
-	}
-
 	public:Product* getProducto() {	//Guardar Valores
 		DateTime date = this->monthCalendar1->SelectionStart;
 		String^ Fecha = date.ToString("d");
 		String^ Nombre = Convert::ToString(this->comboBox1->SelectedItem);
 		Product* newProduct = new Product();
 		newProduct->nombre = Nombre;
-		newProduct->ProdType = ProductoID;
+		newProduct->ProdType = ProductID;
 		newProduct->cant = Cant;
 		newProduct->responsable = Resp;
 		newProduct->fecha = Fecha;
@@ -207,5 +186,25 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 	private: System::Void RetireProduct_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {//En caso de no haber ingresado los datos requeridos
+	ProductID = this->comboBox1->SelectedIndex + 1;
+	if (ProductID < 1) {
+		MessageBox::Show("Seleccione tipo producto", "Error");
+		return;
+	}
+
+	String^ CantS = Convert::ToString(this->textBox2->Text);
+	if (!Int32::TryParse(CantS, Cant)) {
+		MessageBox::Show("Ingrese una cantidad en numeros enteros", "Error");
+		return;
+	}
+
+	Resp = Convert::ToString(this->textBox3->Text);
+	if (String::IsNullOrEmpty(Resp)) {
+		MessageBox::Show("Ingrese el nombre del responsable", "Error");
+		return;
+	}
+	Close();
+}
 };
 }

@@ -131,8 +131,8 @@ namespace Proyecto02FranciscoPuga1183819 {
 		Bodega->ShowDialog();
 	}
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	//BodegaPeek^ Bodegas = gcnew BodegaPeek(Matlist);
-	//Bodegas->ShowDialog();
+	BodegaPeek^ Bodegas = gcnew BodegaPeek(Matlist);
+	Bodegas->ShowDialog();
 }
 };
 }

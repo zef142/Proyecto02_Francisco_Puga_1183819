@@ -9,9 +9,6 @@ namespace Proyecto02FranciscoPuga1183819 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	int ProductID;
-	double Weight;
-	int Cant;
 	/// <summary>
 	/// Summary for AddProduct
 	/// </summary>
@@ -166,6 +163,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->button1->TabIndex = 10;
 			this->button1->Text = L"Agregar";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &AddProduct::button1_Click_1);
 			// 
 			// AddProduct
 			// 
@@ -191,28 +189,9 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		ProductID = this->comboBox1->SelectedIndex + 1;
-		String^ WeightS = Convert::ToString(this->textBox1->Text);
-		String^ CantS = Convert::ToString(this->textBox2->Text);
-		String^ ResponS = Convert::ToString(this->textBox3->Text);
-		//En caso de no haber ingresado los datos requeridos
-		if (ProductID < 1) {
-			MessageBox::Show("Seleccione un tipo de producto", "Error");
-			return;
-		}if (!Double::TryParse(WeightS, Weight)) {
-			MessageBox::Show("Ingrese el peso del producto en numeros", "Error");
-			return;
-		}if (!Int32::TryParse(CantS, Cant)) {
-			MessageBox::Show("Ingrese una cantidad solo en numeros enteros", "Error");
-			return;
-		}if (String::IsNullOrEmpty(ResponS)) {
-			MessageBox::Show("Ingrese el nombre del responsable", "Error");
-			return;
-		}
-		Close();
-	}
-
+		int ProductID;
+		double Weight;
+		int Cant;
 	public:Product* GetProduct() {
 		DateTime date = this->monthCalendar1->SelectionStart;
 		String^ Fecha = date.ToString("d");
@@ -230,5 +209,26 @@ namespace Proyecto02FranciscoPuga1183819 {
 	}
 	private: System::Void AddProduct_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	ProductID = this->comboBox1->SelectedIndex + 1;
+	String^ WeightS = Convert::ToString(this->textBox1->Text);
+	String^ CantS = Convert::ToString(this->textBox2->Text);
+	String^ ResponS = Convert::ToString(this->textBox3->Text);
+	//En caso de no haber ingresado los datos requeridos
+	if (ProductID < 1) {
+		MessageBox::Show("Seleccione un tipo de producto", "Error");
+		return;
+	}if (!Double::TryParse(WeightS, Weight)) {
+		MessageBox::Show("Ingrese el peso del producto en numeros", "Error");
+		return;
+	}if (!Int32::TryParse(CantS, Cant)) {
+		MessageBox::Show("Ingrese una cantidad solo en numeros enteros", "Error");
+		return;
+	}if (String::IsNullOrEmpty(ResponS)) {
+		MessageBox::Show("Ingrese el nombre del responsable", "Error");
+		return;
+	}
+	Close();
+}
 };
 }

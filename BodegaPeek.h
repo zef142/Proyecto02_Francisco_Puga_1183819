@@ -17,7 +17,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 	{
 	public:
 		MatList* BodegasList;
-		BodegaPeek(void)
+		BodegaPeek(MatList* BodegasList)
 		{
 			InitializeComponent();
 			//
@@ -86,6 +86,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Ver Bodega";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &BodegaPeek::button1_Click_1);
 			// 
 			// BodegaPeek
 			// 
@@ -103,23 +104,6 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (listBox1->SelectedIndex != -1) {/*Si no tiene seleccionado nada el resultado seria -1*/
-			int indiceBodega = listBox1->SelectedIndex + 1;
-			Matrix* bodega = BodegasList->fill;
-			for (int i = 1; i < indiceBodega; i++) {
-				bodega = bodega->next;
-			}
-			if (bodega != nullptr) {
-				MyForm1^ formMyForm1 = gcnew MyForm1(bodega);
-				formMyForm1->ShowDialog();
-			}
-		}
-		else {
-			MessageBox::Show("Por favor seleccione una bodega", "Info");
-		}
-	}
-
 	private: void ShowBodegas() {
 		Matrix* AuxMatrix = BodegasList->fill;
 		if (AuxMatrix == nullptr) {
@@ -137,5 +121,21 @@ namespace Proyecto02FranciscoPuga1183819 {
 	}
 	private: System::Void BodegaPeek_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+		if (listBox1->SelectedIndex != -1) {/*Si no tiene seleccionado nada el resultado seria -1*/
+			int indiceBodega = listBox1->SelectedIndex + 1;
+			Matrix* bodega = BodegasList->fill;
+			for (int i = 1; i < indiceBodega; i++) {
+				bodega = bodega->next;
+			}
+			if (bodega != nullptr) {
+				MyForm1^ formMyForm1 = gcnew MyForm1(bodega);
+				formMyForm1->ShowDialog();
+			}
+		}
+		else {
+			MessageBox::Show("Por favor seleccione una bodega", "Info");
+		}
+	}
+};
 }

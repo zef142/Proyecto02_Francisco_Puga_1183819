@@ -206,7 +206,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
 				135)));
 			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Absolute,
-				133)));
+				134)));
 			this->tableLayoutPanel1->Controls->Add(this->label11, 0, 5);
 			this->tableLayoutPanel1->Controls->Add(this->label10, 0, 4);
 			this->tableLayoutPanel1->Controls->Add(this->label9, 0, 3);
@@ -218,6 +218,8 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->tableLayoutPanel1->Controls->Add(this->label2, 2, 0);
 			this->tableLayoutPanel1->Controls->Add(this->label50, 1, 0);
 			this->tableLayoutPanel1->Controls->Add(this->label3, 0, 0);
+			this->tableLayoutPanel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->tableLayoutPanel1->Location = System::Drawing::Point(12, 139);
 			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
 			this->tableLayoutPanel1->RowCount = 6;
@@ -237,12 +239,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label11->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label11->Location = System::Drawing::Point(0, 674);
 			this->label11->Margin = System::Windows::Forms::Padding(0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(118, 126);
+			this->label11->Size = System::Drawing::Size(117, 126);
 			this->label11->TabIndex = 35;
-			this->label11->Text = L"Y5";
+			this->label11->Text = L"E";
 			this->label11->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label10
@@ -251,12 +255,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label10->Location = System::Drawing::Point(0, 535);
 			this->label10->Margin = System::Windows::Forms::Padding(0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(118, 139);
+			this->label10->Size = System::Drawing::Size(117, 139);
 			this->label10->TabIndex = 29;
-			this->label10->Text = L"Y4";
+			this->label10->Text = L"D";
 			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label9
@@ -265,12 +271,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label9->Location = System::Drawing::Point(0, 400);
 			this->label9->Margin = System::Windows::Forms::Padding(0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(118, 135);
+			this->label9->Size = System::Drawing::Size(117, 135);
 			this->label9->TabIndex = 23;
-			this->label9->Text = L"Y3";
+			this->label9->Text = L"C";
 			this->label9->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label8
@@ -279,12 +287,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label8->Location = System::Drawing::Point(0, 262);
 			this->label8->Margin = System::Windows::Forms::Padding(0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(118, 138);
+			this->label8->Size = System::Drawing::Size(117, 138);
 			this->label8->TabIndex = 17;
-			this->label8->Text = L"Y2";
+			this->label8->Text = L"B";
 			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label7
@@ -293,13 +303,16 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label7->Location = System::Drawing::Point(0, 121);
 			this->label7->Margin = System::Windows::Forms::Padding(0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(118, 141);
+			this->label7->Size = System::Drawing::Size(117, 141);
 			this->label7->TabIndex = 11;
-			this->label7->Text = L"Y1";
+			this->label7->Text = L"A";
 			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label7->Click += gcnew System::EventHandler(this, &MyForm1::label7_Click);
 			// 
 			// label6
 			// 
@@ -307,12 +320,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label6->Location = System::Drawing::Point(646, 0);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(645, 0);
 			this->label6->Margin = System::Windows::Forms::Padding(0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(134, 121);
+			this->label6->Size = System::Drawing::Size(135, 121);
 			this->label6->TabIndex = 10;
-			this->label6->Text = L"XE";
+			this->label6->Text = L"5";
 			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label5
@@ -321,12 +336,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label5->Location = System::Drawing::Point(511, 0);
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(510, 0);
 			this->label5->Margin = System::Windows::Forms::Padding(0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(135, 121);
 			this->label5->TabIndex = 9;
-			this->label5->Text = L"XD";
+			this->label5->Text = L"4";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label4
@@ -335,12 +352,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label4->Location = System::Drawing::Point(381, 0);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(380, 0);
 			this->label4->Margin = System::Windows::Forms::Padding(0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(130, 121);
 			this->label4->TabIndex = 8;
-			this->label4->Text = L"XC";
+			this->label4->Text = L"3";
 			this->label4->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label2
@@ -349,12 +368,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label2->Location = System::Drawing::Point(246, 0);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(245, 0);
 			this->label2->Margin = System::Windows::Forms::Padding(0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(135, 121);
 			this->label2->TabIndex = 7;
-			this->label2->Text = L"XB";
+			this->label2->Text = L"2";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label50
@@ -363,12 +384,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label50->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label50->Location = System::Drawing::Point(118, 0);
+			this->label50->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label50->Location = System::Drawing::Point(117, 0);
 			this->label50->Margin = System::Windows::Forms::Padding(0);
 			this->label50->Name = L"label50";
 			this->label50->Size = System::Drawing::Size(128, 121);
 			this->label50->TabIndex = 6;
-			this->label50->Text = L"XA";
+			this->label50->Text = L"1";
 			this->label50->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label3
@@ -377,10 +400,12 @@ namespace Proyecto02FranciscoPuga1183819 {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(0, 0);
 			this->label3->Margin = System::Windows::Forms::Padding(0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(118, 121);
+			this->label3->Size = System::Drawing::Size(117, 121);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"Bodega Ubicacion (X,Y)";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -553,6 +578,8 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 			, MessageBoxButtons::OK
 			, MessageBoxIcon::Exclamation);
 	}
+}
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

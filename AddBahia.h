@@ -12,10 +12,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	double WMax;
-	int column;
-	int SelectProduct;
-	Char fila;
+	
 	/// <summary>
 	/// Summary for AddBahia
 	/// </summary>
@@ -79,7 +76,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"XA", L"XB", L"XC", L"XD", L"XE" });
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"A", L"B", L"C", L"D", L"E" });
 			this->comboBox1->Location = System::Drawing::Point(143, 12);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(148, 21);
@@ -89,7 +86,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"Y1", L"Y2", L"Y3", L"Y4", L"Y5" });
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(5) { L"1", L"2", L"3", L"4", L"5" });
 			this->comboBox2->Location = System::Drawing::Point(143, 51);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(148, 21);
@@ -180,6 +177,10 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 		}
 #pragma endregion
+		double WMax;
+		int column;
+		int SelectProduct;
+		Char fila;
 	private: System::Void AddBahia_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
