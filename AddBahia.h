@@ -12,6 +12,10 @@ namespace Proyecto02FranciscoPuga1183819 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	double WMax;
+	int column;
+	int SelectProduct;
+	Char fila;
 	/// <summary>
 	/// Summary for AddBahia
 	/// </summary>
@@ -181,7 +185,53 @@ namespace Proyecto02FranciscoPuga1183819 {
 
 
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	column = this->comboBox2->SelectedIndex + 1;
+	String^ WeightS = Convert::ToString(this->textBox1->Text);
+	//Asegurar que hayan valores seleccionados
+	if ((this->comboBox1->SelectedIndex + 1) < 1) {
+		MessageBox::Show("Fila no seleccionada", "Error");
+		return;
+	}
+	SelectProduct = this->checkedListBox1->SelectedIndex + 1;
+	if (SelectProduct < 1) {
+		MessageBox::Show("Selecciones al menos un producto", "Error");
+		return;
+	}
+	if (column < 1) {
+		MessageBox::Show("Columna no seleccionada", "Error");
+		return;
+	}if (!Double::TryParse(WeightS, WMax)) {
+		MessageBox::Show("Ingrese un peso", "Error");
+		return;
+	}
+	Close();
 }
+public: Bahia* GetNewBahia() {
+	fila = Convert::ToChar(this->comboBox1->SelectedItem);
+	Bahia* newBahia = new Bahia();
+	if (column != 0 && SelectProduct != 0) {
+		newBahia->fill = fila;
+		newBahia->colums = column;
+		newBahia->Wmax = WMax;
+		newBahia->Wavailable = WMax;
+		int count = 0;
+		for (int i = 0; i < 3; i++) {
+			if (this->checkedListBox1->GetItemChecked(i)) {
+				newBahia->product[i] = i + 1;
+				count = count + 1;
+			}
+		}
+		return newBahia;
+	}
+	else {
+		return false;
+	}
+}
+
+	public: String^ GetRespuesta() {
+		String^ respuesta = "Se inserto una nueva bahia en la posicion: " + fila + column +
+			". Soporta un peso maximo de: " + WMax + ".\r\n";
+		return respuesta;
+	}
 };
 }

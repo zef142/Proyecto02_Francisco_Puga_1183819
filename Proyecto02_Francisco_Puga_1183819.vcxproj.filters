@@ -27,6 +27,18 @@
     <ClCompile Include="AddBahia.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AddProduct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteBahia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RetireProduct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BodegaPeek.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -66,6 +78,18 @@
       <Filter>Header Files\Headers</Filter>
     </ClInclude>
     <ClInclude Include="AddBahia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddProduct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteBahia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RetireProduct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BodegaPeek.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

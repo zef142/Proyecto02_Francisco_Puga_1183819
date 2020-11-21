@@ -121,14 +121,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddBahia.cpp" />
+    <ClCompile Include="AddProduct.cpp" />
+    <ClCompile Include="BodegaPeek.cpp" />
+    <ClCompile Include="DeleteBahia.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="RetireProduct.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddBahia.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="AddProduct.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Bahia.h" />
+    <ClInclude Include="BodegaPeek.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="DeleteBahia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="HeaderNodos.h" />
     <ClInclude Include="HHlist.h" />
     <ClInclude Include="Hlist.h" />
@@ -142,6 +155,9 @@
     </ClInclude>
     <ClInclude Include="PileProduct.h" />
     <ClInclude Include="Product.h" />
+    <ClInclude Include="RetireProduct.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VHlist.h" />
     <ClInclude Include="Vlist.h" />
   </ItemGroup>
@@ -149,11 +165,23 @@
     <EmbeddedResource Include="AddBahia.resx">
       <DependentUpon>AddBahia.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodegaPeek.resx">
+      <DependentUpon>BodegaPeek.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBahia.resx">
+      <DependentUpon>DeleteBahia.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm1.resx">
       <DependentUpon>MyForm1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetireProduct.resx">
+      <DependentUpon>RetireProduct.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

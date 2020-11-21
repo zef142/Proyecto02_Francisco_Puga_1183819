@@ -1,5 +1,8 @@
 #pragma once
-
+#include "MyForm1.h"
+#include "VHlist.h"
+#include "MatList.h"
+#include "BodegaPeek.h"
 namespace Proyecto02FranciscoPuga1183819 {
 
 	using namespace System;
@@ -15,12 +18,14 @@ namespace Proyecto02FranciscoPuga1183819 {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
+		MatList* Matlist;
 		MyForm(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+			Matlist = new MatList();
 		}
 
 	protected:
@@ -87,6 +92,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Nueva Bodega";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// button2
 			// 
@@ -96,6 +102,7 @@ namespace Proyecto02FranciscoPuga1183819 {
 			this->button2->TabIndex = 3;
 			this->button2->Text = L"Ver Bodega";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// MyForm
 			// 
@@ -116,5 +123,16 @@ namespace Proyecto02FranciscoPuga1183819 {
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		Matrix* NewMatrix = new Matrix();
+		Matlist->insertMatriz(NewMatrix);
+		MessageBox::Show("Se ha creado una nueva bodega en memoria", "Info");
+		MyForm1^ Bodega = gcnew MyForm1(NewMatrix);
+		Bodega->ShowDialog();
+	}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	//BodegaPeek^ Bodegas = gcnew BodegaPeek(Matlist);
+	//Bodegas->ShowDialog();
+}
+};
 }
